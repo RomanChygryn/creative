@@ -1,0 +1,168 @@
+@import "navbar";
+
+.header {
+  min-height: 740px;
+  height: 100vh;
+  position: relative;
+  background: url(../img/header_bg.jpg);
+  background-position: 0 0;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+  .nav,
+.nav__list,
+.nav__logo,
+.nav__item {
+	display: flex;
+}
+
+.nav {
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: start;
+  .nav__logo {
+    background: url('../img/logo.png') no-repeat 0 0;
+  	width: 79px;
+  	height: 75px;
+  }
+  .nav__list {
+  	justify-content: space-around;
+  	flex-direction: column;
+
+  	list-style-type: none;
+
+  	width: 100%;
+  	height: 0;
+  	overflow: hidden;
+
+  	background: white;
+  	transition: .25s ease-in-out;
+    &.nav__list.open {
+    	height: calc(100vh - 60px);
+    }
+    .nav__item {
+      align-items: center;
+    	justify-content: center;
+    	padding: 10px;
+    	height: 25%;
+      margin-top: 5px;
+      background: #848ba2c4;
+      .nav__link {
+      	text-decoration: none;
+      	color: #fff;
+      }
+    }
+  }
+}
+
+
+.menu__toggle {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	height: 45px;
+	width: 60px;
+
+	background: none;
+	border: none;
+	outline-style: none;
+}
+
+.menu__toggle span {
+	display: block;
+	position: absolute;
+	background: white;
+	height: 6px;
+	width: 40px;
+    margin: 2px 10px;
+	border-radius: 5px;
+
+	transform: rotate(0deg);
+	opacity: 1;
+	transition: .25s ease-in-out;
+
+}
+
+.menu__toggle span:nth-child(1) {
+	top: 5px;
+}
+
+.menu__toggle span:nth-child(2),
+.menu__toggle span:nth-child(3) {
+	top: 17px;
+}
+
+.menu__toggle span:nth-child(4) {
+	top: 29px;
+}
+
+.menu__toggle.open span:nth-child(2) {
+	transform: rotate(45deg);
+}
+
+.menu__toggle.open span:nth-child(3) {
+	transform: rotate(-45deg);
+}
+
+.menu__toggle.open span:nth-child(1) {
+	transform: translateY(20px);
+	opacity: 0;
+}
+
+.menu__toggle.open span:nth-child(4) {
+	transform: translateY(-20px);
+	opacity: 0;
+}
+
+@media all and (min-width : 480px) {
+	.menu__toggle {
+		display: none;
+	}
+
+	.nav,
+	.nav__list {
+		flex-direction: row;
+	}
+
+	.nav {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.nav__list {
+		height: auto;
+		background: none;
+	}
+
+	.nav__list {
+		overflow: visible;
+	}
+
+	.nav__logo {
+		height: 55px;
+		padding-top: 15px;
+	}
+
+	.nav__item {
+		background: none;
+		margin-bottom: 0;
+	}
+
+}
+
+@media all and (min-width : 700px) {
+	.nav__logo {
+		width: 30%;
+	}
+
+	.nav__list {
+		width: 70%;
+	}
+}
+
+@media all and (min-width : 1025px) {
+	.container {
+		width: 1024px;
+		margin: auto;
+	}
+}
+}
