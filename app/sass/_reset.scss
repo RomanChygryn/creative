@@ -13,4 +13,13 @@ html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, fo
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  @include desktopmd {
+    max-width: 1024px;
+  }
+  @include tablet {
+    max-width: 882px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
 }
