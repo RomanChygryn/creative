@@ -21,4 +21,8 @@ $(document).ready(function(){
       });
     } // End if
   });
+
+  $('.scroll__btn--arrow').addClass('animated bounce infinite');
+  $('.hero__title').addClass('animated slideInLeft');
+  $('.hero__subtitle').addClass('animated slideInRight');
 });

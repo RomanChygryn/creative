@@ -1,11 +1,75 @@
 @import "navbar";
 
 .header {
-  min-height: 740px;
+  // min-height: 740px;
   height: 100vh;
   position: relative;
   background: url(../img/header_bg.jpg);
   background-position: 0 0;
   background-size: cover;
   font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .header__hero {
+    .hero__title {
+      color: #fff;
+      font-size: 9.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-align: center;
+      @include tablet {
+        font-size: 5rem;
+      }
+      @include mobile {
+        font-size: 3rem;
+      }
+    }
+    .hero__subtitle {
+      text-align: center;
+      color: #11749e;
+      font-size: 1.54rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: .5rem;
+      @include tablet {
+        font-size: 1.3rem;
+      }
+      @include mobile {
+        font-size: 1.2rem;
+      }
+
+      .hero__subtitle--link {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  .hero__btn {
+    margin-top: 14vh;
+    @include mobile {
+      margin-top: 7vh;
+    }
+    cursor: pointer;
+    .btn__title {
+      text-align: center;
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 2vh;
+    }
+    .btn__scrollbtn {
+      @include wh(75px, 75px);
+      padding: .6rem;
+      box-sizing: border-box;
+      margin: 0 auto;
+      .scroll__btn {
+        fill: #fff;
+        .scroll__btn--arrow {
+
+        }
+      }
+    }
+  }
 }

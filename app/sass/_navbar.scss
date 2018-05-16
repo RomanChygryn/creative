@@ -3,20 +3,27 @@
   top: 0;
   right: 0;
   width: 100%;
-  height: 115px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+  @include tablet {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .navbar__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     .navbar__logo {
-      height: auto;
+      height: 45px;
       display: block;
+      img {
+        height: 45px;
+      }
     }
     .navbar__nav {
-      height: 115px;
       width: 100%;
       display: flex;
       justify-content: flex-end;
@@ -32,7 +39,6 @@
         position: relative;
         z-index: 6;
         background: #11749E;
-        // border-radius: 50%;
         border: none;
         cursor: pointer;
         &:focus {
@@ -88,9 +94,13 @@
         @include tablet {
           display: none;
         }
+        li {
+          margin-right: 3.125rem;
+          padding-top: 1.8rem;
+          padding-bottom: 1.8rem;
+        }
         .nav__item {
           color: #fff;
-          padding-right: 3.125rem;
           @include desktopmd {
             padding-right: 1.75rem;
           }
@@ -107,7 +117,7 @@
         right: 0;
         top: 0;
         height: 100vh;
-        min-height: 742px;
+        min-height: 542px;
         z-index: 5;
 
         li {
@@ -174,114 +184,3 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-// .navbar__nav {
-//
-//   // mobile hamburger
-//   .nav__mobile {
-//     display: none;
-//     position: relative;
-//     z-index: 6;
-//     background: #E52E2E;
-//     border-radius: 50%;
-//     @include wh(45px,45px);
-//
-//     .nav__mobile--toggle {
-//       position: absolute;
-//       left: 9px;
-//       top: 11px;
-//       cursor: pointer;
-//       padding: 10px 35px 16px 0px;
-//       span,
-//       span:before,
-//       span:after {
-//         cursor: pointer;
-//         border-radius: 1px;
-//         height: 3px;
-//         width: 25px;
-//         background: #ffffff;
-//         position: absolute;
-//         display: block;
-//         content: '';
-//         transition: all 300ms ease-in-out;
-//       }
-//       span:before {
-//         top: -8px;
-//       }
-//       span:after {
-//         bottom: -8px;
-//       }
-//       &.active span {
-//         background-color: transparent;
-//         &:before,
-//         &:after {
-//           top: 0;
-//         }
-//         &:before {
-//           transform: rotate(45deg);
-//         }
-//         &:after {
-//           transform: rotate(-45deg);
-//         }
-//       }
-//     }
-//   }
-// // hamburge end
-//
-//
-//   .nav--mobile {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100%;
-//     background: rgba(0, 0, 0, 0.9);
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//     height: 100vh;
-//     min-height: 742px;
-//     z-index: 5;
-//
-//     li {
-//       padding-bottom: 1rem;
-//       .nav__item {
-//         text-transform: uppercase;
-//         color: #cbccd2;
-//         font-weight: 600;
-//         font-size: 1.8rem;
-//         &:hover {
-//           color: #ffffff;
-//           transition: color .3s;
-//         }
-//       }
-//     }
-//   }
-//
-//   .nav {
-//     display: flex;
-//
-//     li {
-//       padding-left: 2rem;
-//       .nav__item {
-//         text-transform: uppercase;
-//         color: #cbccd2;
-//         font-weight: 600;
-//         font-size: 1.1rem;
-//         &:hover {
-//           color: #ffffff;
-//           transition: color .3s;
-//         }
-//       }
-//     }
-//   }
-// }
