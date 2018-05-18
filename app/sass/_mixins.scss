@@ -3,8 +3,19 @@
   height: $h;
 }
 
+@mixin mobilesm {
+  @media (max-width: 471px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin mobilelg {
+  @media (max-width: 700px) {
     @content;
   }
 }
