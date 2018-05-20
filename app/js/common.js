@@ -25,4 +25,10 @@ $(document).ready(function(){
   $('.scroll__btn--arrow').addClass('animated bounce infinite');
   $('.hero__title').addClass('animated slideInLeft');
   $('.hero__subtitle').addClass('animated slideInRight');
+
+  $('.read__more').on( "click", function(event) {
+    event.preventDefault();
+    $('.modal__wrapper').addClass('modal__wrapper--show');
+  });
+  
 });

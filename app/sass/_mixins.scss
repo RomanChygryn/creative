@@ -36,3 +36,8 @@
     @content;
   }
 }
+@mixin tabletsm {
+  @media (max-width: 830px) {
+    @content;
+  }
+}

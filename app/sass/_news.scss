@@ -1,0 +1,209 @@
+.news {
+  font-family: "Raleway", sans-serif;
+  .news__item {
+    display: flex;
+    align-items: center;
+    background: #222222;
+    @include tabletsm {
+      display: block;
+    }
+
+    .modal__wrapper {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      z-index: 7;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, .7);
+      .modal__close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+        &:focus,
+        &:hover {
+          color: #999;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      .modal {
+        box-sizing: border-box;
+        padding: 1rem;
+        position: relative;
+        background-color: #fefefe;
+        width: 40%;
+        max-width: 1200px;
+        max-height: 95vh;
+        overflow: scroll;
+        overflow-x: hidden;
+        &__image {
+          width: 100%;
+          display: block;
+          margin-right: 1rem;
+          &__src {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__date {
+          margin-bottom: 1.5rem;
+          display: block;
+        }
+        &__title {
+          font-size: 2.5rem;
+          margin-bottom: 1.5rem;
+          display: block;
+        }
+        &__description {
+          line-height: 1.7rem;
+        }
+      }
+    }
+    .modal__wrapper--show {
+      display: flex;
+    }
+
+
+
+    .item__content {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 8vw;
+      padding-right: 6vw;
+      width: 50%;
+      box-sizing: border-box;
+      height: max-content;
+      @include tabletsm {
+        width: 100%;
+        height: 450px;
+        padding-top: 8rem;
+      }
+      @include mobile {
+        width: 100%;
+        height: 450px;
+        padding-top: 6rem;
+      }
+      .content__title,
+      .content__description,
+      .content__date {
+        color: #fff;
+      }
+      .content__date {
+        display: inline-block;
+        font-size: .81rem;
+        margin-bottom: 1.25rem;
+        @include tablet {
+          margin-bottom: .6rem;
+          font-size: .71rem;
+        }
+        @include tabletsm {
+          font-size: 1.2rem;
+        }
+      }
+      .content__title {
+        font-size: 1.56rem;
+        text-transform: uppercase;
+        margin-bottom: 2.81rem;
+        @include desktopmd {
+          margin-bottom: 1.8rem;
+        }
+        @include tablet {
+          margin-bottom: 1rem;
+          font-size: 1.1rem;
+        }
+        @include tabletsm {
+          font-size: 2rem;
+        }
+      }
+      .content__description {
+        font-size: .94rem;
+        margin-bottom: 1.25rem;
+        @include tablet {
+          margin-bottom: .6rem;
+          font-size: .8rem;
+        }
+        @include tabletsm {
+          font-size: .9rem;
+        }
+      }
+      .content__btn {
+        @include wh(100px,35px);
+        border-radius: 45px;
+        border: 1px solid #fff;
+        background: none;
+        transition: all .5s;
+        cursor: pointer;
+        .read__more {
+          color: #fff;
+          transition: all .5s;
+        }
+        &:hover {
+          background: #fff;
+          .read__more {
+            color: #000;
+          }
+        }
+      }
+    }
+    .item__image {
+      max-height: 450px;
+      width: 50%;
+      overflow: hidden;
+      @include tabletsm {
+        width: 100%;
+      }
+      &__src {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+  }
+  .news__item--second {
+    background: #fff;
+    .item__content {
+      order: 2;
+      padding-left: 6vw;
+      padding-right: 8vw;
+      .content__title,
+      .content__description,
+      .content__date {
+        color: #000;
+      }
+      .content__description {
+
+      }
+      .content__btn {
+        float: right;
+        clear: both;
+        border-radius: 45px;
+        border: 1px solid #000;
+        cursor: pointer;
+        .read__more {
+          color: #000;
+        }
+        &:hover {
+          background: #000;
+          .read__more {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .item__image {
+      max-height: 450px;
+      &__src {
+      }
+    }
+  }
+
+}

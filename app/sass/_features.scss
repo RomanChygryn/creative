@@ -8,6 +8,9 @@
   align-items: center;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
+  @include mobile {
+    padding: 4rem 0;
+  }
   .features__title {
     position: relative;
     margin-bottom: 82px;
