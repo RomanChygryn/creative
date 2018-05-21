@@ -1,6 +1,57 @@
 .news {
   font-family: "Raleway", sans-serif;
+  position: relative;
+  z-index: 1;
+  .modal {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    width: 0;
+    height: 0;
+    transition: all 2s;
+    .modal__wrapper {
+      display: none;
+      background: #fff;
+    }
+    .modal__close {
+      display: none;
+      @include wh(100px,35px);
+      border-radius: 45px;
+      border: 1px solid #fff;
+      background: none;
+      transition: all .5s;
+      cursor: pointer;
+      .read__more {
+        color: #fff;
+        transition: all .5s;
+      }
+      &:hover {
+        background: #fff;
+        .modal__close__btn {
+          color: #000;
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+      .modal__close__btn {
+        color: #fff;
+      }
+    }
+  }
+
+  .modal--show {
+      width: 100%;
+      height: 100%;
+    .modal__close {
+      display: block;
+    }
+  }
+
   .news__item {
+    position: relative;
     display: flex;
     align-items: center;
     background: #222222;
@@ -8,68 +59,55 @@
       display: block;
     }
 
-    .modal__wrapper {
-      display: none;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      z-index: 7;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: rgba(0, 0, 0, .7);
-      .modal__close {
-        color: white;
-        position: absolute;
-        top: 10px;
-        right: 25px;
-        font-size: 35px;
-        font-weight: bold;
-        &:focus,
-        &:hover {
-          color: #999;
-          text-decoration: none;
-          cursor: pointer;
-        }
-      }
-      .modal {
-        box-sizing: border-box;
-        padding: 1rem;
-        position: relative;
-        background-color: #fefefe;
-        width: 40%;
-        max-width: 1200px;
-        max-height: 95vh;
-        overflow: scroll;
-        overflow-x: hidden;
-        &__image {
-          width: 100%;
-          display: block;
-          margin-right: 1rem;
-          &__src {
-            width: 100%;
-            height: 100%;
-          }
-        }
-        &__date {
-          margin-bottom: 1.5rem;
-          display: block;
-        }
-        &__title {
-          font-size: 2.5rem;
-          margin-bottom: 1.5rem;
-          display: block;
-        }
-        &__description {
-          line-height: 1.7rem;
-        }
-      }
-    }
-    .modal__wrapper--show {
-      display: flex;
-    }
+    //   .modal {
+    //     text-align: center;
+    //     box-sizing: border-box;
+    //     position: relative;
+    //     padding: 8rem;
+    //     padding-top: 6rem;
+    //     @include mobile {
+    //       padding: 1rem;
+    //     }
+    //     &__date {
+    //       margin-bottom: 1.5rem;
+    //       display: block;
+    //       color: #fff;
+    //       @include mobile {
+    //         margin-bottom: 1rem;
+    //       }
+    //     }
+    //     &__title {
+    //       padding-bottom: 2.5rem;
+    //       font-size: 2.5rem;
+    //       margin-bottom: 2.5rem;
+    //       display: block;
+    //       width: 50%;
+    //       margin-left: auto;
+    //       margin-right: auto;
+    //       color: #fff;
+    //       border-bottom: 1px solid #fff;
+    //       @include mobile {
+    //         margin-bottom: 1rem;
+    //         padding-bottom: 1rem;
+    //         width: 80%;
+    //       }
+    //     }
+    //     &__description {
+    //       line-height: 1.9rem;
+    //       color: #fff;
+    //       text-align: left;
+    //       @include mobile {
+    //         font-size: 1rem;
+    //         // line-height: 1.4rem;
+    //       }
+    //     }
+    //   }
+    // }
+    // .modal__wrapper--show {
+    //   left: 0;
+    //   height: 100vh;
+    //   opacity: 1;
+    // }
 
 
 

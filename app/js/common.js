@@ -26,9 +26,24 @@ $(document).ready(function(){
   $('.hero__title').addClass('animated slideInLeft');
   $('.hero__subtitle').addClass('animated slideInRight');
 
+
+
+
+
   $('.read__more').on( "click", function(event) {
-    event.preventDefault();
-    $('.modal__wrapper').addClass('modal__wrapper--show');
+      event.preventDefault();
   });
-  
+
+  $('.content__btn').on( "click", function() {
+    $('.modal').toggleClass("modal--show");
+    $('.modal__wrapper').css('display', 'block');
+  });
+
+  $('.modal__close').on( "click", function(event) {
+    event.preventDefault();
+    $('.modal').removeClass("modal--show");
+  });
+
+
+
 });
