@@ -36,12 +36,21 @@ $(document).ready(function(){
 
   $('.content__btn').on( "click", function() {
     $('.modal').toggleClass("modal--show");
-    $('.modal__wrapper').css('display', 'block');
+
+    setTimeout(function() {
+       $('.modal__wrapper').toggleClass("modal__wrapper--show");
+   }, 2000);
+
+    // $('.modal__wrapper').toggleClass("modal__wrapper--show");
   });
 
   $('.modal__close').on( "click", function(event) {
     event.preventDefault();
-    $('.modal').removeClass("modal--show");
+    setTimeout(function() {
+       $('.modal').removeClass("modal--show");
+   }, 0);
+    // $('.modal').removeClass("modal--show");
+    $('.modal__wrapper').toggleClass("modal__wrapper--show");
   });
 
 
