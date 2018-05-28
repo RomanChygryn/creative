@@ -2,72 +2,52 @@
   font-family: "Raleway", sans-serif;
   position: relative;
   z-index: 1;
-  .modal {
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #000;
-    width: 0;
-    height: 0;
-    transition: all 2s;
-    .modal__wrapper {
-      display: block;
-      // background: #fff;
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 0s, opacity 0.5s linear;
-      // transition-delay: 2s;
-      padding: 3rem;
-      .modal__date,
-      .modal__title,
-      .modal__description {
-        color: #fff;
-      }
-    }
-    .modal__wrapper--show {
-      visibility: visible;
-      opacity: 1;
-      transition: visibility 0s, opacity 0.5s linear;
-    }
-    .modal__close {
+    &__modal {
       display: none;
-      @include wh(100px,35px);
-      border-radius: 45px;
-      border: 1px solid #fff;
-      background: none;
-      transition: all .5s;
-      cursor: pointer;
-      position: relative;
-      bottom: 0;
-      .read__more {
-        color: #fff;
-        transition: all .5s;
-      }
-      &:hover {
-        background: #fff;
-        .modal__close__btn {
-          color: #000;
-        }
-      }
-      &:focus {
-        outline: none;
-      }
-      .modal__close__btn {
-        color: #fff;
-      }
-    }
-  }
-
-  .modal--show {
+      position: absolute;
       width: 100%;
       height: 100%;
-      // transition-delay: 2s;
-    .modal__close {
-      display: block;
-    }
-  }
+      z-index: 2;
+      background: rgba(0,0,0,1);
+      &--wrapper {
+        max-width: 75%;
+        margin: 0 auto;
+      }
+      &__date {
+        color: #fff;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+        display: inline-block;
+      }
+      &__title {
+        color: #fff;
+        margin-bottom: 1.5rem;
+        font-size: 2.5rem;
+      }
+      &__description {
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.6rem;
+      }
+      &__btn {
+        position: absolute;
+        z-index: 3;
+        top: 45px;
+        right: 40px;
+        height: 50px;
+        width: 140px;
+        background: #000;
+        border: 1px solid #fff;
+        border-radius: 45px;
+        cursor: pointer;
 
+          &--close {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+      }
+    }
   .news__item {
     position: relative;
     display: flex;
@@ -76,59 +56,6 @@
     @include tabletsm {
       display: block;
     }
-
-    //   .modal {
-    //     text-align: center;
-    //     box-sizing: border-box;
-    //     position: relative;
-    //     padding: 8rem;
-    //     padding-top: 6rem;
-    //     @include mobile {
-    //       padding: 1rem;
-    //     }
-    //     &__date {
-    //       margin-bottom: 1.5rem;
-    //       display: block;
-    //       color: #fff;
-    //       @include mobile {
-    //         margin-bottom: 1rem;
-    //       }
-    //     }
-    //     &__title {
-    //       padding-bottom: 2.5rem;
-    //       font-size: 2.5rem;
-    //       margin-bottom: 2.5rem;
-    //       display: block;
-    //       width: 50%;
-    //       margin-left: auto;
-    //       margin-right: auto;
-    //       color: #fff;
-    //       border-bottom: 1px solid #fff;
-    //       @include mobile {
-    //         margin-bottom: 1rem;
-    //         padding-bottom: 1rem;
-    //         width: 80%;
-    //       }
-    //     }
-    //     &__description {
-    //       line-height: 1.9rem;
-    //       color: #fff;
-    //       text-align: left;
-    //       @include mobile {
-    //         font-size: 1rem;
-    //         // line-height: 1.4rem;
-    //       }
-    //     }
-    //   }
-    // }
-    // .modal__wrapper--show {
-    //   left: 0;
-    //   height: 100vh;
-    //   opacity: 1;
-    // }
-
-
-
     .item__content {
       padding-top: 1rem;
       padding-bottom: 1rem;
