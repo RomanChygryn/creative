@@ -46,15 +46,15 @@
   .blog__content {
     width: 100%;
     text-align: center;
-    display: flex;
+    display: block;
     justify-content: space-around;
     .item {
       display: inline-block;
       margin-top: 20px;
       width: 265px;
+
       .item__image {
         margin: 0 auto;
-        background: #2e85aa;
         display: flex;
         align-items: center;
         justify-content: center;

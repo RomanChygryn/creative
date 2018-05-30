@@ -27,7 +27,7 @@
 }
 
 @mixin desktopmd {
-  @media (max-width: 1200px) {
+  @media (max-width: 1202px) {
     @content;
   }
 }
