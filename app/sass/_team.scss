@@ -1,4 +1,4 @@
-.blog {
+.team {
   padding: 4rem 2rem;
   padding-top: 6rem;
   box-sizing: border-box;
@@ -16,7 +16,7 @@
       position: relative;
       display: flex;
       justify-content: center;
-      .blog__title {
+      .team__title {
         text-align: center;
         color: #000;
         text-transform: uppercase;
@@ -27,7 +27,7 @@
         display: block;
         text-align: center;
       }
-      .blog__capital {
+      .team__capital {
         font-size: 11.43rem;
         font-weight: 800;
         color: #d7d7d7;
@@ -36,43 +36,53 @@
       }
     }
 
-  .blog__subtitle {
+  .team__subtitle {
     margin-top: 6.1rem;
     color: #222222;
     font-size: 1.88rem;
     text-align: center;
     margin-bottom: 3.1rem;
   }
-  .blog__content {
+  .team__content {
     width: 100%;
     text-align: center;
     display: block;
     .item {
       display: inline-block;
       margin-top: 20px;
+      margin-right: 20px;
       max-width: 265px;
-
+      &:last-child {
+        margin-right: 0;
+      }
       .item__image {
         display: inline-block;
-        width: 95%;
+        max-width: 273px;
+        max-height: 416px;
         margin: 0 auto;
         margin-bottom: 25px;
-        .image__content{
-          max-width: 100%;
-        }
-      }
-      .item__title {
-        text-align: center;
-        text-transform: uppercase;
-        color: #11749e;
-        font-size: 1.12rem;
-        margin-bottom: 35px;
+        overflow: hidden;
+        position: relative;
       }
       .item__description {
-        text-align: center;
-        font-size: .94rem;
-        color: #222222;
-        line-height: 1.3rem;
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+        position: relative;
+        background: #fff;
+        margin-top: -70px;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        &__name {
+          font-size: 1.25rem;
+          color: #11749e;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+        &__position {
+          font-size: .94rem;
+          font-weight: 500;
+        }
       }
     }
   }

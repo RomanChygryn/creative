@@ -1,0 +1,30 @@
+.footer {
+  background: #222222;
+  padding: 3.125rem 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    @include mobile {
+      display: block;
+    }
+    .footer__copy,
+    .footer__designed {
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      &__icon {
+        display: inline-block;
+        background: url('../img/freebee.png') no-repeat -1px 0;
+      	width: 29px;
+      	height: 26px;
+      }
+    }
+    .footer__copy, {
+      align-self: flex-end;
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -23,10 +23,12 @@ $(document).ready(function(){
   });
 
   $('.scroll__btn--arrow').addClass('animated bounce infinite');
-  $('.hero__title').addClass('animated slideInLeft');
-  $('.hero__subtitle').addClass('animated slideInRight');
+  // $('.hero__title').addClass('animated slideInLeft');
+  // $('.hero__subtitle').addClass('animated slideInRight');
 
-
+  $('.form__content__btn').on( "click", function(event) {
+      event.preventDefault();
+  });
 
 
 

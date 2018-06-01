@@ -1,0 +1,87 @@
+.about {
+  background: url('../img/Layer87.png');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+  padding: 6.25rem 0;
+    @include mobilelg {
+        padding: 3rem 0;
+    }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobilelg {
+      display: block;
+    }
+    .about__hero {
+      display: inline-block;
+      max-width: 474px;
+      @include mobilelg {
+        max-width: 100%;
+        display: block;
+      }
+      .hero__title {
+        font-size: 1.56rem;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+          @include mobilelg {
+            margin-bottom: 1.5rem;
+          }
+      }
+      .hero__description {
+        font-size: .94rem;
+        color: #fff;
+        line-height: 1.5rem;
+        margin-bottom: 4.37rem;
+        @include mobilelg {
+          margin-bottom: 2.5rem;
+        }
+      }
+      .hero__specs {
+        .specs__item {
+          background: #11749e;
+          margin-bottom: 1.5rem;
+          .specs__item__content {
+            font-size: .94rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            padding: .61rem .6rem .61rem 1.12rem;
+            box-sizing: border-box;
+            @include mobilelg {
+              font-size: .7rem;
+              padding: .41rem .41rem .41rem .8rem
+            }
+          }
+          &--design {
+            width: 70%;
+          }
+          &--code {
+            width: 80%;
+          }
+          &--layout {
+            width: 90%;
+          }
+        }
+      }
+    }
+    .about__image {
+      display: inline-block;
+      &__content {
+        display: inline-block;
+        max-height: 645px;
+        @include mobilelg {
+          max-height: 500px;
+        }
+      }
+      @include mobilelg {
+        text-align: center;
+        max-width: 100%;
+        display: block;
+      }
+    }
+  }
+}
