@@ -13,16 +13,6 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  .header__video {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    top: 0;
-    left: 0;
-    @include mobile {
-
-    }
-  }
   .header__hero {
     position: relative;
     z-index: 4;
