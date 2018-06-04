@@ -16,6 +16,8 @@
       position: relative;
       display: flex;
       justify-content: center;
+      opacity: 0;
+      transition: opacity .5s;
       .team__title {
         text-align: center;
         color: #000;
@@ -37,6 +39,9 @@
     }
 
   .team__subtitle {
+    opacity: 0;
+    transition: opacity .5s;
+    transition-delay: .5s;
     margin-top: 6.1rem;
     color: #222222;
     font-size: 1.88rem;
@@ -44,6 +49,9 @@
     margin-bottom: 3.1rem;
   }
   .team__content {
+    opacity: 0;
+    transition: opacity .5s;
+    transition-delay: 1s;
     width: 100%;
     text-align: center;
     display: block;

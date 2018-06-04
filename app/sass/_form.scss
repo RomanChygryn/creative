@@ -16,6 +16,8 @@
     padding: 4rem 0;
   }
     .wrapper {
+      opacity: 0;
+      transition: opacity .5s;
       position: relative;
       display: flex;
       justify-content: center;
@@ -43,6 +45,9 @@
       }
     }
     .form__content {
+      opacity: 0;
+      transition: opacity .5s;
+      transition-delay: .5s;
       text-align: center;
       width: 100%;
       display: block;

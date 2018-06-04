@@ -18,6 +18,8 @@
     .about__hero {
       display: inline-block;
       max-width: 474px;
+      opacity: 0;
+      transition: opacity .5s;
       @include mobilelg {
         max-width: 100%;
         display: block;
@@ -45,6 +47,7 @@
           background: #11749e;
           margin-bottom: 1.5rem;
           .specs__item__content {
+            white-space: nowrap;
             font-size: .94rem;
             color: #fff;
             text-transform: uppercase;
@@ -57,19 +60,41 @@
             }
           }
           &--design {
-            width: 70%;
+            width: 0;
+            transition: all .5s;
+            .specs__item__content {
+              opacity: 0;
+              transition: all .5s;
+              transition-delay: .5s;
+            }
           }
           &--code {
-            width: 80%;
+            width: 0;
+            transition: all .5s;
+            transition-delay: .5s;
+            .specs__item__content {
+              opacity: 0;
+              transition: all .5s;
+              transition-delay: 1s;
+            }
           }
           &--layout {
-            width: 90%;
+            width: 0;
+            transition: all .5s;
+            transition-delay: 1s;
+            .specs__item__content {
+              opacity: 0;
+              transition: all .5s;
+              transition-delay: 1.5s;
+            }
           }
         }
       }
     }
     .about__image {
       display: inline-block;
+      opacity: 0;
+      transition: opacity .5s;
       &__content {
         display: inline-block;
         max-height: 645px;

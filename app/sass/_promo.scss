@@ -20,6 +20,7 @@
       display: inline-block;
     }
     .item {
+      position: relative;
       display: flex;
       align-items: center;
       margin-top: 20px;
@@ -41,6 +42,16 @@
         color: #fff;
         line-height: 1.3rem;
       }
+    }
+
+    #promoLeft {
+      opacity: 0;
+      transition: all .5s;
+    }
+    #promoRight {
+      opacity: 0;
+      transition: all .5s;
+      transition-delay: .5s;
     }
   }
 }

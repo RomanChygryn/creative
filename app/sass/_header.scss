@@ -1,8 +1,8 @@
 @import "navbar";
 
 .header {
-  // min-height: 740px;
   height: 100vh;
+  min-height: 740px;
   position: relative;
   background: url(../img/header_bg.jpg);
   background-position: 0 0;
@@ -12,13 +12,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  .header__video {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+    @include mobile {
+
+    }
+  }
   .header__hero {
+    position: relative;
+    z-index: 4;
     .hero__title {
       color: #fff;
       font-size: 9.5rem;
       text-transform: uppercase;
       font-weight: 700;
       text-align: center;
+      text-shadow: 3px 1px 2px rgba(150, 150, 150, 1);
       @include tablet {
         font-size: 5rem;
       }
